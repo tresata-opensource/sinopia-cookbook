@@ -11,5 +11,4 @@ supports 'ubuntu', '>= 12.04'
 
 depends 'apt'
 depends 'nodejs', '~> 2.0'
-depends 'user'
 depends 'logrotate'

@@ -4,8 +4,9 @@
 # Recipe:: users
 #
 
-user_account node['sinopia']['user'] do
-  home File.join('/home/', node['sinopia']['user'])
-  password nil
-  manage_home true
+user node['sinopia']['user'] do
+  comment "Sinopia"
+  system true
+  shell "/sbin/nologin"
+  home node['sinopia']['datadir']
 end
